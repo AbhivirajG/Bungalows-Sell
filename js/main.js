@@ -118,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    gtag('event', 'conversion', { 'send_to': 'AW-18190056053/zcw2CIzhk7UcEPX02OFD' });
+
     formWrap.style.display = 'none';
     formSuccess.classList.add('show');
   });
