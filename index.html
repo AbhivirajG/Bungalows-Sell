@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18190056053"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18190056053');
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxury Bungalow for Sale in Ahmedabad | 4 & 5 BHK Private Residences — The Bungalows</title>
@@ -10,9 +20,12 @@
   <meta property="og:description" content="Exclusive 4 & 5 BHK private bungalows for sale in Ahmedabad. Starting from ₹7Cr. Designed for discerning buyers, investors and legacy families who value absolute privacy.">
   <meta property="og:type" content="website">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/building-exterior.jpg">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="css/styles.css">
 
   <script id="tailwind-config">
@@ -184,7 +197,8 @@
       <img src="images/building-exterior.jpg"
            class="w-full h-full object-cover"
            style="filter: grayscale(40%) brightness(1.05);"
-           alt="Luxury bungalow for sale exterior Ahmedabad">
+           alt="Luxury bungalow for sale exterior Ahmedabad"
+           fetchpriority="high" loading="eager">
       <div class="absolute inset-0" style="background: rgba(251,249,248,0.82);"></div>
     </div>
 
@@ -306,7 +320,8 @@
             <img id="carousel-img"
                  src="images/hero-1.jpg"
                  alt="Luxury bungalow for sale interior Ahmedabad private residence"
-                 class="w-full h-full object-cover transition-opacity duration-700">
+                 class="w-full h-full object-cover transition-opacity duration-700"
+                 loading="lazy">
           </div>
 
         </div>
@@ -316,7 +331,8 @@
           <div class="flex-1 gallery-item img-reveal overflow-hidden rounded" style="transition-delay:0.15s; min-height: 120px;">
             <img src="images/hero-2.jpg"
                  alt="Private courtyard luxury bungalow for sale Ahmedabad"
-                 class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                 class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                 loading="lazy">
           </div>
 
           <!-- Info card -->
@@ -439,7 +455,7 @@
     <div class="flex flex-col md:flex-row justify-between items-center px-gutter py-section-padding-sm max-w-container-max mx-auto gap-8">
 
       <img src="images/logo.png"
-           alt="The Bungalows" class="h-10 w-auto object-contain">
+           alt="The Bungalows" class="h-10 w-auto object-contain" loading="lazy">
 
       <nav class="flex flex-wrap justify-center gap-6">
         <a href="#" class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200">Privacy Policy</a>
@@ -462,7 +478,7 @@
   </button>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
