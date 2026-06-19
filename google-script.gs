@@ -124,14 +124,7 @@ function doPost(e) {
       piSh.appendRow(piRow);
     }
 
-    // 3. FOLLOW-UP tab — seed client name
-    var fuSh = ss.getSheetByName('Follow-up');
-    if (fuSh) {
-      var clientName = type === 'channel_partner' ? (d.client_name || '') : (d.name || '');
-      fuSh.appendRow([clientName]);
-    }
-
-  } catch(err) {
+} catch(err) {
     Logger.log('ERROR: ' + err.message);
   }
 
